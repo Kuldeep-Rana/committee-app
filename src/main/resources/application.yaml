@@ -1,0 +1,22 @@
+server:
+  port: 8181
+spring:
+  application:
+    name: committee-app
+  datasource:
+    username: sa
+    password: password
+    url: jdbc:h2:file:~/sample/committeedb
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+  sql:
+    init:
+      mode: always
+
